@@ -13,11 +13,29 @@ It's not yet supported by CircuitPython. A generic ESP32-S3 build works, but the
 
 ## Pin definitions
 
-From
+From Makerfabs with parallel TFT - mostly consecutive.
 
+https://github.com/Makerfabs/Makerfabs-ESP32-S3-Parallel-TFT-with-Touch/blob/main/firmware/SD16_3.5/SD16_3.5.ino
 
+The small has the pins consecutive: https://github.com/Makerfabs/ESP32-S3-Parallel-TFT-with-Touch-1.9inch/blob/main/example/LvglBenchmark/pin_config.h
 
 ## Possible parallel bus definition
 
-From 
+Be careful before dreaming big! You might have to write the driver yourself ... I was expected a proper init sequence for the display and the parallel bus. Well ...
 
+From https://github.com/adafruit/circuitpython/blob/main/ports/espressif/boards/makerfabs_tft7/board.c
+
+``` C
+#include "supervisor/board.h"
+#include "mpconfigboard.h"
+#include "shared-bindings/microcontroller/Pin.h"
+
+void board_init(void) {
+}
+
+// Use the MP_WEAK supervisor/shared/board.c versions of routines not defined here.
+```
+
+Yes, it is empty!
+
+And only 7 pins in total are defined in https://github.com/adafruit/circuitpython/blob/main/ports/espressif/boards/makerfabs_tft7/mpconfigboard.h
