@@ -9,15 +9,5 @@ It's not yet supported by CircuitPython. A generic ESP32-S3 build works, but the
 - The respective page for CircuitPython https://circuitpython.org/board/makerfabs_tft7/
 - Board definitions: https://github.com/adafruit/circuitpython/tree/main/ports/espressif/boards/makerfabs_tft7
 
-![picture T-Display S3](docs/T-DISPLAY-S3.jpg)
-
-## Pin definitions
-
-From
-
-
-
-## Possible parallel bus definition
-
-From 
+![picture T-Display S3](T-DISPLAY-S3.jpg)
 
