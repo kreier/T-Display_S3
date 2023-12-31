@@ -1,6 +1,19 @@
 # History for this project for students
 
-The current solution traces back to 2015 and my first steps with physical computing and __Arduino Uno__. The [temp.hofkoh.de](https://github.com/kreier/temp.hofkoh.de) project from 2013 was not yet student centered.
+The current solution traces back to 2015 and my first steps with physical computing and __Arduino Uno__. The [temp.hofkoh.de](https://github.com/kreier/temp.hofkoh.de) project from 2013 was not yet student centered. Some of the constraints will be visible with this comparison table:
+
+| Board              | MHz | kByte RAM | kByte Flash | USB drive |   input  | output | display | WiFi | Bluetooth | LiPo |  notes  |
+|--------------------|----:|----------:|------------:|:---------:|:--------:|:------:|:-------:|:----:|:---------:|:----:|:-------:|
+| Arduino Uno        |  16 |         2 |          16 |           |   none   |   led  |   16x2  |      |  external |      |         |
+| Arduino Mega       |  16 |         8 |         256 |           |   none   |   led  |         |      |  external |      |         |
+| ESP8266            |  80 |        80 |        4000 |           |   GPIO0  |   led  |  128x64 |   x  |           |      |         |
+| T-Display ESP32    | 240 |       520 |        4000 |           | 2 button |   led  | 240x135 |   x  |    4.0    |   x  |         |
+| T8 ESP32-S2 ST7789 | 240 |      8000 |        4000 |     x     |   GPIO0  |        | 240x135 |   x  |    BLE    |   x  | SD card |
+| T-Display rp2040   | 133 |       264 |        4000 |     x     | 2 button |   led  | 240x135 |      |           |   x  |         |
+| T-PicoC3           | 133 |       264 |        4000 |     x     | 2 button |   led  | 240x135 |   x  |           |   x  |         |
+| T-Display S3       | 240 |      8000 |       16000 |     x     | 2 button |   led  | 320x170 |   x  |    BLE    |   x  |         |
+
+At one point or another you run into these limitations, and spend a lot of time to overcome them.
 
 ## 2015 Start with Arduino Uno
 
