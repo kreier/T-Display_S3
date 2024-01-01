@@ -43,4 +43,14 @@ The solution: We applied for it as a student project. And now we have it registe
 
 ## 2024 Support for parallel bus displays on the T-Display S3
 
+I made further progress in Circuitpython and compiling my own firmwares. Installed again on my Windows 11 PC as WSL Ubuntu 22.04 it works without problems. Limor Fried (Lady Ada from Adafruit) explains the history of MicroPython and CircuitPython [in this video at the Espressif DevCon22](https://youtu.be/1eZQzn0PX-A?si=4XkupHrjkIC9J43_). The Espressif boards need a different toolchain and build process than all the other ports, as [explained here in the "Building CircuitPython" tutorial by Dan Halbert](https://learn.adafruit.com/building-circuitpython/espressif-build). The reason was explained by [Scott Shawcroft](https://github.com/tannewt) in his [2 hour deep dive podcast](https://www.youtube.com/watch?v=5zq8RHXVdSI) from April 2020 when support for the ESP32-S2 was in development. It is because the architecture used by Espressif is a [Tensilica](https://en.wikipedia.org/wiki/Tensilica) Xtensa LX6 or LX7 core with its own 32-bit instruction set. All other boards use some from of ARM architecture ([Cortex-M0](https://en.wikipedia.org/wiki/ARM_Cortex-M) for raspberry pico rp2040, [Cortex-M4](https://en.wikipedia.org/wiki/ARM_Cortex-M) for STM32F411 and Cortex M7 for the NXP iMX RT1011 in the [Metro M7](https://www.adafruit.com/product/4950)). So it's ARM or Cadence ...
+
+Now I actually made some contributions to CircuitPython:
+
+- Updated [T-Display rp2040](https://circuitpython.org/board/lilygo_t_display_rp2040/)
+- Included T-PicoC3
+- Included T-Display 4M
+- Included 01Space QTPy OLED
+- Working on T-Display S3 with parallel bus to display
+
 This will be a challenge - support a parallel display. Let's see ...
